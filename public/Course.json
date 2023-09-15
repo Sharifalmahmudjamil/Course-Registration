@@ -1,0 +1,74 @@
+[
+    {
+      "id": 1,
+      "img": "https://i.ibb.co/7233BGC/c-programing.jpg",
+      "title": "Introduction to C Programming",
+      "description": "This course is an introduction to the fundamentals of C programming. It covers topics such as variables, data types, operators, control flow, functions, and objects.",
+      "price": 15000,
+      "credit": 3
+    },
+    {
+      "id": 2,
+      "img": "https://i.ibb.co/s309bZb/Python-Programming-Edureka.png",
+      "title": "Introduction to Computer Science and Programming with Python",
+      "description": "This course introduces the fundamentals of computer science and programming using the Python programming language. It covers topics such as variables, data types, functions, loops, conditional statements, and object-oriented programming.",
+      "price": 19000,
+      "credit": 4
+    },
+    {
+      "id": 3,
+      "img": "https://i.ibb.co/mc243CN/java-script.jpg",
+      "title": "Introduction to JavaScript",
+      "description": "This course introduces the fundamentals of the JavaScript programming language. It covers topics such as variables, data types, functions, loops, conditional statements, and objects.",
+      "price": 23000,
+      "credit": 3
+    },
+    {
+      "id": 4,
+      "img": "https://i.ibb.co/JsB3dpv/data-structure-algorithm-courses.png",
+      "title": "Basic Data Structures",
+      "description": "This course teaches you how to program games using the Python programming language. It covers topics such as object-oriented programming, graphics, and animation.",
+      "price": 35000,
+      "credit": 2
+    },
+    {
+      "id": 5,
+      "img": "https://i.ibb.co/fvkjJZt/web-development.jpg",
+      "title": "The Complete Web Development ",
+      "description": "This course teaches you how to build websites from scratch using HTML, CSS, and JavaScript. It also covers topics such as responsive design, WordPress, and React.js.",
+      "price": 32000,
+      "credit": 10
+    },
+    {
+      "id": 6,
+      "img": "https://i.ibb.co/1M5Fk04/aungler.jpg",
+      "title": "Angular 2 Fundamentals",
+      "description": "This course teaches you the fundamentals of the Angular 2 framework. It covers topics such as components, directives, pipes, and services.",
+      "price": 14000,
+      "credit": 3
+    },
+    {
+      "id": 7,
+      "img": "https://i.ibb.co/1rMQxYN/react-js-online-training.png",
+      "title": "The Complete React JS Course",
+      "description": "This course teaches you how to build React applications from scratch. It covers topics such as components, props, state, and routing.",
+      "price": 12000,
+      "credit": 5
+    },
+    {
+      "id": 8,
+      "img": "https://i.ibb.co/3vCfJ7P/Software-Engineering-Courses-After-12th.jpg",
+      "title": "Software Engineering",
+      "description": "A Software Engineer is an IT professional who designs, develops and maintains computer software at a company. They use their creativity and technical skills and apply the principles of software engineering to help solve new and ongoing problems for an organization.",
+      "price": 34000,
+      "credit": 12
+    },
+    {
+      "id": 9,
+      "img": "https://i.ibb.co/F6Np7y0/sql.jpg",
+      "title": "Database (MySQL)",
+      "description": "MySQL Database is a client/server system that consists of a multithreaded SQL server that supports different back ends, several different client programs and libraries, administrative tools, and a wide range of application-programming interfaces (APIs)",
+      "price": 26000,
+      "credit": 4
+    }
+  ]
