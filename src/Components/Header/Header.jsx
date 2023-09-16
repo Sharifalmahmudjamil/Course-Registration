@@ -2,12 +2,19 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import Cart from "../Cart/Cart";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const Header = () => {
 
         const [allCourse,setAllCourse]=useState([]);
         const [selectedCourse,setSelectedCourse]=useState([]);
+        const [remaining,setRemaining]=useState(0);
+        const [totalCredit,setTotalCredit]=useState(0);
+        const [totalPrice,setTotalPrice]=useState(0);
+    
 
 
         useEffect(()=>{
@@ -19,10 +26,27 @@ const Header = () => {
 
         const handleSelectCourse = (course) =>{
             const isExist=selectedCourse.find((item)=>item.id== course.id);
+
+            let count=course.credit;
+            let price=course.price;
+
             if(isExist){
-               return alert('all ready booked')
+               return toast('all ready booked')
             }
             else{
+                selectedCourse.forEach((item)=>{
+                    count=count + item.credit;
+                });
+                selectedCourse.forEach((item)=>{
+                    price=price+item.price;
+                });
+                // console.log(Total)
+                const totalRemaining= 20-count;
+                setTotalCredit(count);
+                
+                setRemaining(totalRemaining);
+                setTotalPrice(price);
+
                 setSelectedCourse([...selectedCourse,course]);
             }
                 
@@ -58,6 +82,8 @@ const Header = () => {
                         </div>
              <div className="card-actions justify-center ">
                     <button onClick={()=>handleSelectCourse(course)} className="btn bg-pink-500 text-white hover:bg-purple-600 w-[300px] h-[40px]">Select</button>
+                    <ToastContainer />
+                    
                  </div>
                 </div>
                 </div>
@@ -66,9 +92,9 @@ const Header = () => {
               }     
                 </div>
 
-                <div className="w-[300px] h-[140px] border-solid border-2 border-white-600  bg-[#FFFFFF] mx-8 mt-5 ">
+                <div className="w-[300px] h-[800px] border-solid border-2 border-white-600  bg-white mx-8 mt-5 ">
                 <div className="courseName ">
-                        <Cart selectedCourse={selectedCourse}></Cart>
+                        <Cart selectedCourse={selectedCourse} remaining={remaining} totalCredit={totalCredit} totalPrice={totalPrice} ></Cart>
                 </div>
                 </div>
 
