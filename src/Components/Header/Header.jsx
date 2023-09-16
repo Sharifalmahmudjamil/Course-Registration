@@ -12,7 +12,7 @@ const Header = () => {
 
         const [allCourse,setAllCourse]=useState([]);
         const [selectedCourse,setSelectedCourse]=useState([]);
-        const [remaining,setRemaining]=useState(0);
+        const [remaining,setRemaining]=useState(20);
         const [totalCredit,setTotalCredit]=useState(0);
         const [totalPrice,setTotalPrice]=useState(0);
     
