@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Cart from "../Cart/Cart";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+  import { FaDollarSign,FaBookOpen} from 'react-icons/fa';
 
 
 
@@ -24,14 +25,14 @@ const Header = () => {
         });
 
 
-        const handleSelectCourse = (course) =>{
+        const handleSelectCourse = (course,) =>{
             const isExist=selectedCourse.find((item)=>item.id== course.id);
 
             let count=course.credit;
             let price=course.price;
 
             if(isExist){
-               return toast('all ready booked')
+               return toast('You already select this Course')
             }
             else{
                 selectedCourse.forEach((item)=>{
@@ -43,6 +44,9 @@ const Header = () => {
                 // console.log(Total)
                 const totalRemaining= 20-count;
                 setTotalCredit(count);
+                if(count>20){
+                    return toast("You don't have enough credit hour")
+                }
                 
                 setRemaining(totalRemaining);
                 setTotalPrice(price);
@@ -55,7 +59,7 @@ const Header = () => {
 
 
     return (
-        <div className="w-full h-full mx-auto">
+        <div className="w-full h-full mx-auto bg-[#F3F3F3]">
 
             
             <div>
@@ -73,10 +77,13 @@ const Header = () => {
             <h2 className="card-title">{course.title}</h2>
             <p>{course.description}</p>
                     <div className="flex justify-between">
-                            <div>
+                          
+                            <div className="flex gap-2">
+                               <h1 className="my-2"> <small><FaDollarSign></FaDollarSign></small></h1> 
                                 <p> Price: {course.price}</p>
                             </div>
-                            <div>
+                            <div className="flex gap-2 ">
+                                <h1 className="my-2"> <small><FaBookOpen></FaBookOpen></small></h1>
                                 <p>{course.credit}hr</p>
                             </div>
                         </div>
@@ -92,7 +99,7 @@ const Header = () => {
               }     
                 </div>
 
-                <div className="w-[300px] h-[800px] border-solid border-2 border-white-600  bg-white mx-8 mt-5 ">
+                <div className="w-[300px] h-[400px] p-3 border-none border-white-600 rounded-xl bg-white mx-8 mt-5 ">
                 <div className="courseName ">
                         <Cart selectedCourse={selectedCourse} remaining={remaining} totalCredit={totalCredit} totalPrice={totalPrice} ></Cart>
                 </div>
