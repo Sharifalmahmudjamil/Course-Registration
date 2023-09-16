@@ -8,7 +8,7 @@ const Cart = ({selectedCourse,remaining,totalCredit,totalPrice,}) => {
     return (
         <div>
             <div>
-                <h3>Credit Hour Remaining:{remaining}hr</h3>
+                <h3 className="font-bold text-lg text-pink-500">Credit Hour Remaining:{remaining}hr</h3>
                 <hr />
             </div>
             <h3 className="text-xl font-bold ">Course Name</h3>

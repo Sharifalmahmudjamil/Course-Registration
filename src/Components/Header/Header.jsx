@@ -43,10 +43,11 @@ const Header = () => {
                 });
                 // console.log(Total)
                 const totalRemaining= 20-count;
-                setTotalCredit(count);
                 if(count>20){
                     return toast("You don't have enough credit hour")
                 }
+                setTotalCredit(count);
+               
                 
                 setRemaining(totalRemaining);
                 setTotalPrice(price);
@@ -63,7 +64,7 @@ const Header = () => {
 
             
             <div>
-            <h3 className='text-4xl text-center font-bold'>Course Registration</h3>
+            <h3 className='text-4xl text-center font-bold '>Course Registration</h3>
             </div>
             {/* card section */}
             <div className="flex flex-col lg:flex-row mt-14">
