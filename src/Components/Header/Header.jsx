@@ -76,16 +76,16 @@ const Header = () => {
             <figure><img className="w-full h-4/5 rounded-xl" src={course.img} alt="Shoes" /></figure>
             <div className="card-body">
             <h2 className="card-title">{course.title}</h2>
-            <p>{course.description}</p>
+            <p className="font-normal text-gray-500">{course.description}</p>
                     <div className="flex justify-between">
                           
                             <div className="flex gap-2">
                                <h1 className="my-2"> <small><FaDollarSign></FaDollarSign></small></h1> 
-                                <p> Price: {course.price}</p>
+                                <p className="font-normal text-gray-500"> Price: {course.price}</p>
                             </div>
                             <div className="flex gap-2 ">
                                 <h1 className="my-2"> <small><FaBookOpen></FaBookOpen></small></h1>
-                                <p>{course.credit}hr</p>
+                                <p className="font-normal text-gray-500">{course.credit}hr</p>
                             </div>
                         </div>
              <div className="card-actions justify-center ">
