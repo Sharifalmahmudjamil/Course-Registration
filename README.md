@@ -33,3 +33,5 @@ In the render part of the component, I map over the allCourse array and display 
 I render a <Cart> component, passing the selectedCourse, remaining, totalCredit, and totalPrice as props.
 
 Overall, this code seems to be the front-end part of a course registration system, where users can select courses, view their selections, and receive feedback on their choices. The react-toastify library is used for displaying notifications, and icons from the react-icons library are used to represent currency and credit hours.
+
+# Live-link: http://filthy-reading.surge.sh/
